@@ -10,24 +10,11 @@
 */
 void ReversePrint(Node *head)
 {
-    Node* current = new Node;
-    Node* prev = new Node;
-    Node* next = new Node;
-    current = head;
-    prev = NULL;
-    while(current != NULL){
-        next = current->next;
-        current->next = prev;
-        prev = current;
-        current = next;
+    if(!head){
+        return;
     }
     
-    head = prev;
-    
-    while(head){
-        cout << head->data << endl;
-        head = head->next;
-        
-    }
+    ReversePrint(head->next);
+    cout << head->data << endl;
 }
 
