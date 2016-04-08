@@ -35,14 +35,8 @@ node * insert(node * root, int value)
     }
 
     if(ancessor->data > value){
-        if(ancessor->left != NULL){
-            newNode->left = ancessor->left;
-        }
         ancessor->left = newNode;
     } else {
-        if(ancessor->right != NULL){
-            newNode->right = ancessor->right;
-        }
         ancessor->right = newNode;
     }
 
